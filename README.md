@@ -73,6 +73,11 @@ NOTE: Found the DSL rules in: se.gu.xtext.patterns/src/se/gu/xtext/patterns/Patt
 ![image](https://user-images.githubusercontent.com/63869574/149015549-c62f13a8-53e0-44ab-8b1a-7e850bfb090b.png)
 
 
+- Delete all (also on directory ![image](https://user-images.githubusercontent.com/63869574/149017095-88b661e2-c6dd-4702-bc6b-afec43f195fa.png)
+ ) except:
+
+![image](https://user-images.githubusercontent.com/63869574/149016980-87390c44-71ee-4dcb-9a9f-094ba0178f75.png)
 
 
+- 
 
