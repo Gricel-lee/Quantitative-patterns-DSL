@@ -29,6 +29,50 @@ Then look for the unclassified ones that contains SWT. Click next and install:
 
 ![image](https://user-images.githubusercontent.com/63869574/148935561-690b1571-9703-4224-8fc5-f9d1a27a1572.png)
 
-# 
+##
 
 ![image](https://user-images.githubusercontent.com/63869574/148951215-522521f5-30df-4df8-879b-be08ddcee034.png)
+
+
+# Tries:
+// Empty workspace
+C:\Users\grist\Documents\eclipse2021-workspace
+//Open Eclipse EMF
+
+
+************************ 1)
+From sergio repository:
+https://github.com/SergioGarG/quantitative-patterns
+- Import > General Projects from Folder or Archive > se.gu.patterns
+
+Warnings:
+Execution environment is lower than one of the plug-in's dependencies (org.eclipse.core.runtime) which has an execution environment of JavaSE-11.	MANIFEST.MF	/se.gu.patterns/META-INF	line 10	Plug-in Problem
+The JRE container on the classpath is not a perfect match to the 'J2SE-1.5' execution environment	MANIFEST.MF	/se.gu.patterns/META-INF	line 10	Plug-in Problem
+There is no 'jre.compilation.profile' build entry and the project has Java compliance preferences set	build.properties	/se.gu.patterns	line 1	Plug-in Problem
+Unknown referenced nature: org.eclipse.ocl.pivot.ui.oclnature.	.project	/se.gu.patterns	Unknown	Unknown nature
+
+*********************** 2)
+Copy all files from Sergio repository into workspace: eclipse2021-workspace
+
+
+-Open eclipse
+
+Warning:
+The ... workspace was written with an older version. Continue and update workspace which may make it incompatible with older versions?
+
+-Click continue
+![image](https://user-images.githubusercontent.com/63869574/149015231-115a212a-0183-4f36-8766-0badabf7ccf1.png)
+
+Errors:
+![image](https://user-images.githubusercontent.com/63869574/149015340-b2c260f6-9b6f-47d5-99e4-5f409485ad0a.png)
+
+![image](https://user-images.githubusercontent.com/63869574/149015416-c5db9e25-b8f1-487e-bf93-88b159f7b81b.png)
+
+NOTE: Found the DSL rules in: se.gu.xtext.patterns/src/se/gu/xtext/patterns/Patterns.xtext
+
+![image](https://user-images.githubusercontent.com/63869574/149015549-c62f13a8-53e0-44ab-8b1a-7e850bfb090b.png)
+
+
+
+
+
