@@ -17,9 +17,10 @@
 
 
 ## Errors
-
+# Not solved yet:
 ![image](https://user-images.githubusercontent.com/63869574/148935347-2b77ff2d-b568-4a12-96f1-30083f373e43.png)
 
+(Solution didn't work)
 Go to Help > Install new software. In Work With select All available sites:
 
 ![image](https://user-images.githubusercontent.com/63869574/148935707-5041d4f0-e812-4f6f-82d2-17c8e51cfddb.png)
