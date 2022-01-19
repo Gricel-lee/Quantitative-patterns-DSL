@@ -4,7 +4,7 @@
 
 - Download from https://github.com/Askarpour/quantitative-patterns
 - Unzip
-- In Eclipse, install the plugins Xtext and Xtend
+- In Eclipse, install the plugins Xtext and Xtend (Help> Eclipse Marketplace).
 - File > Import > Project from Folder or Archive, and import unzipped folders one by one that start with "se.gu.patterns"
 - Go to:
 
@@ -14,6 +14,13 @@
 
 ![image](https://user-images.githubusercontent.com/63869574/148664047-68611d79-291e-49f4-befa-0f2fae19a256.png)
 
+
+## Make all plugins (folders) 
+
+## Xtext from ecore
+Create an xtext project by: first right clicking on all folders -> configure -> convert to xtext project.
+Then:
+http://koehnlein.blogspot.com/2010/03/xtext-for-your-ecore-models.html 
 
 
 ## Errors
