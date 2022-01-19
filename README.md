@@ -77,7 +77,7 @@ This should generate:
 
 ![image](https://user-images.githubusercontent.com/63869574/150196304-8897aed0-87a8-4a98-ab49-5df1fddde94a.png)
 
-NOTE: If the genmodel needs to be change, delete these new 3 files, the "src" folder in the main Ecore project, and delete the three lines in the MANIFEST.MF file (to see the code select the tab MANIFEST.MF from underneath the opened file):
+NOTE: If the genmodel needs to be change: delete the "src" folder in the main Ecore project, the build.properties, plugin.properties and plugin.xml files; and delete the three lines in the MANIFEST.MF file (to see the code select the tab MANIFEST.MF from underneath the opened file).
 
 ![image](https://user-images.githubusercontent.com/63869574/150198010-c63cf6a9-2723-41e1-b595-07d18f4c3a60.png)
 
@@ -85,11 +85,37 @@ NOTE: If the genmodel needs to be change, delete these new 3 files, the "src" fo
 
 ### Xtext
 
+Help link: http://koehnlein.blogspot.com/2010/03/xtext-for-your-ecore-models.html
+
 Right click on each of the folders (plugins) and Configure > Convert to Xtext Project
 
 ![image](https://user-images.githubusercontent.com/63869574/150229813-e097e857-add4-4ff3-803f-a4b608e77179.png)
 
-Then File > New > Other > 
+Then File > New > Other > Xtext > Xtext Project From Existing Ecore Models > Add the .genmodel and select Scenario as Entry rule > Next > Finish 
+
+![image](https://user-images.githubusercontent.com/63869574/150231308-dba68cd5-10a1-4676-9972-e28223fef640.png)
+
+![image](https://user-images.githubusercontent.com/63869574/150231527-9e6f8e80-1edc-46ac-b2bf-b7682258b259.png)
+
+It should generate 4 new plugins:
+
+![image](https://user-images.githubusercontent.com/63869574/150231843-99885bf7-0dc7-45a5-8b29-ab3d1b5cfbdd.png)
+
+Open the .xtext file on the src folder of the first plugin. 
+
+![image](https://user-images.githubusercontent.com/63869574/150232125-bbdf1022-bd65-4c12-923d-6bbd3f43897f.png)
+
+We will merge this file with https://github.com/SergioGarG/quantitative-patterns/blob/main/se.gu.xtext.patterns/src/se/gu/xtext/patterns/Pattens.xtext
+
+In this case, Eclipse detects an error associated with Maintain, AbortIf and ResumeIf:
+
+![image](https://user-images.githubusercontent.com/63869574/150232952-9b30f8ec-a645-4684-aa91-368dbcc844fe.png)
+
+Changing "locationevent+=LocationEvent" to "locationevent=LocationEvent" should solve the problem.
+
+## Run Xtext file
+
+Right click on the first xtext plugin > Run as > Run Configuration > Run
 
 
 ## Installation
