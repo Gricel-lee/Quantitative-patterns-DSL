@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/se.gu.uoy.dsl/src" modelPluginID="se.gu.uoy.dsl"
+    modelName="QuantitativePatterns" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>quantitativePatterns.ecore</foreignModel>
+  <genPackages prefix="Patterns" disposableProviderFactory="true" ecorePackage="quantitativePatterns.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="quantitativePatterns.ecore#//CompositionOperator">
+      <genEnumLiterals ecoreEnumLiteral="quantitativePatterns.ecore#//CompositionOperator/and"/>
+      <genEnumLiterals ecoreEnumLiteral="quantitativePatterns.ecore#//CompositionOperator/or"/>
+    </genEnums>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//SpecificationPatterns">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//SpecificationPatterns/locations"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//Coverage"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Scenario">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Scenario/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Scenario/location"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Scenario/action"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Scenario/robots"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Scenario/missions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Scenario/elementaryQuantitativePatterns"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Scenario/compositePatterns"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Location">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Location/name"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Action/name"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Sequence"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Order"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//StrictOrder"/>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//Surveillance"/>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//Avoidance"/>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//Restricted">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Restricted/number"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//Conditional"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//LocationEvent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//LocationEvent/robots"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//LocationEvent/location"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//Condition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Condition/name"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Event/description"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Robots">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Robots/name"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Fair"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//More"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Less"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Exactly"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Simple"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Until"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//After"/>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//ConditionBased">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//ConditionBased/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//ConditionBased/locationevent"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//Trigger">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Trigger/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Trigger/locationevent"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Wait"/>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//Descriptive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Descriptive/pattern"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Descriptive/action"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//Reaction"/>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//Bind"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Maximize"/>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//ElementaryQuantitativePatterns">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//ElementaryQuantitativePatterns/measure"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//ElementaryQuantitativePatterns/mission"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//ElementaryQuantitativePatterns/robots"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//LessThan">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//LessThan/value"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Minimize"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//AtMost">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//AtMost/value"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//AtLeast">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//AtLeast/value"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//GreaterThan">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//GreaterThan/value"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Within">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Within/value1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Within/value2"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//StrictlyWithin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//StrictlyWithin/value1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//StrictlyWithin/value2"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//CompositePatterns">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//CompositePatterns/robots"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//Missions">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Missions/robots"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//SimpleMissions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//SimpleMissions/id"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//SimpleMissions/movementPatterns"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//ActionEnd">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//ActionEnd/description"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Instantly"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Delayed"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Promptly"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//ComplexMissions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//ComplexMissions/composition"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//MissionComposition"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Negation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Negation/not"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Composition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Composition/binaryType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Composition/missions"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Conservation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Conservation/measure"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Preservation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Preservation/measure"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//RepeatEvery"/>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//Timed">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Timed/t"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//ConditionDependent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//ConditionDependent/condition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//ConditionDependent/locationevent"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//ActionDependent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//ActionDependent/action"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//MissionDependent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//MissionDependent/missions"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Maintain"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//AbortIf"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//ResumeIf"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Accrue"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Secure"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Equidistance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Equidistance/location1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Equidistance/location2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Equidistance/distance"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Follow">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Follow/objetToFollow"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Follow/distance"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//LocationDependent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//LocationDependent/locations"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Pause"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Timeout"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//WithConfidence"/>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//LevelOfConfidence">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//LevelOfConfidence/confidence"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Relaxed"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//AlmostAt"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//ExactlyAt"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//DeadlineAt"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Proportionality">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Proportionality/proportion"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Proportionality/mission1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//Proportionality/mission2"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Simultaneously"/>
+    <genClasses image="false" ecoreClass="quantitativePatterns.ecore#//SetOfActionsDependent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference quantitativePatterns.ecore#//SetOfActionsDependent/setOfActions"/>
+    </genClasses>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Sequencing"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Deviation"/>
+    <genClasses ecoreClass="quantitativePatterns.ecore#//Repeat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute quantitativePatterns.ecore#//Repeat/c"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

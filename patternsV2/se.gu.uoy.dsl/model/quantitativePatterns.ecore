@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="patterns" nsURI="http://www.example.org/patterns" nsPrefix="patterns">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="SpecificationPatterns" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" upperBound="-1"
+        eType="#//Location"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Visit1" abstract="true" interface="true"
+      eSuperTypes="#//SpecificationPatterns"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="CompositionOperator">
+    <eLiterals name="and" literal="and"/>
+    <eLiterals name="or" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Scenario">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" upperBound="-1"
+        eType="#//Condition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" upperBound="-1"
+        eType="#//Location" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" upperBound="-1"
+        eType="#//Action" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="robots" upperBound="-1"
+        eType="#//Robots" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="missions" upperBound="-1"
+        eType="#//Missions" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elementaryPatterns" upperBound="-1"
+        eType="#//ElementaryPatterns" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="compositePatterns" upperBound="-1"
+        eType="#//CompositePatterns" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specificationPatterns"
+        upperBound="-1" eType="#//SpecificationPatterns" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Location">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Action">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sequence" eSuperTypes="#//Visit1 #//Patrol"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Order" eSuperTypes="#//Visit1 #//Patrol"/>
+  <eClassifiers xsi:type="ecore:EClass" name="StrictOrder" eSuperTypes="#//Visit1 #//Patrol"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Patrol" abstract="true" interface="true"
+      eSuperTypes="#//SpecificationPatterns"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AvoidanceVisit" abstract="true" interface="true"
+      eSuperTypes="#//SpecificationPatterns"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Restricted" abstract="true" interface="true"
+      eSuperTypes="#//AvoidanceVisit">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Conditional" abstract="true" interface="true"
+      eSuperTypes="#//AvoidanceVisit"/>
+  <eClassifiers xsi:type="ecore:EClass" name="LocationEvent" eSuperTypes="#//Condition">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="robots" lowerBound="1"
+        eType="#//Robots"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location" lowerBound="1"
+        eType="#//Location"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Condition" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Event" eSuperTypes="#//Condition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="condition" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Robots">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Fair" eSuperTypes="#//Visit1 #//Patrol"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Visit2" eSuperTypes="#//Restricted"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Less" eSuperTypes="#//Restricted"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Exactly" eSuperTypes="#//Restricted"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Simple" eSuperTypes="#//Conditional"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Avoid" eSuperTypes="#//ConditionBased"/>
+  <eClassifiers xsi:type="ecore:EClass" name="After" eSuperTypes="#//ConditionBased"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConditionBased" abstract="true" interface="true"
+      eSuperTypes="#//Conditional">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//Condition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locationevent" eType="#//LocationEvent"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Trigger" abstract="true" interface="true"
+      eSuperTypes="#//SpecificationPatterns">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//Condition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locationevent" eType="#//LocationEvent"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Wait" eSuperTypes="#//Trigger"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Descriptive" abstract="true" interface="true"
+      eSuperTypes="#//Trigger">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pattern" eType="#//SpecificationPatterns"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" eType="#//Action"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="React" abstract="true" interface="true"
+      eSuperTypes="#//Descriptive"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Counteract" abstract="true" interface="true"
+      eSuperTypes="#//Descriptive"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Maximize" eSuperTypes="#//ElementaryPatterns"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ElementaryPatterns" abstract="true"
+      interface="true" eSuperTypes="#//Missions">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="measure" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mission" eType="#//Missions"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LessThan" eSuperTypes="#//ElementaryPatterns">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Minimize" eSuperTypes="#//ElementaryPatterns"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AtMost" eSuperTypes="#//ElementaryPatterns">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AtLeast" eSuperTypes="#//ElementaryPatterns">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GreaterThan" eSuperTypes="#//ElementaryPatterns">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Within" eSuperTypes="#//ElementaryPatterns">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value1" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value2" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StrictlyWithin" eSuperTypes="#//ElementaryPatterns">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value1" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value2" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositePatterns" abstract="true" interface="true"
+      eSuperTypes="#//Missions"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Missions" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="robots" lowerBound="1"
+        eType="#//Robots"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ShallMissions" eSuperTypes="#//Missions">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="movementPatterns" upperBound="-1"
+        eType="#//SpecificationPatterns" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionEnd" eSuperTypes="#//Condition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="action" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Instantly" eSuperTypes="#//React #//Counteract"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Delayed" eSuperTypes="#//React #//Counteract"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Promptly" eSuperTypes="#//React #//Counteract"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComplexMissions" eSuperTypes="#//Missions">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composition" upperBound="-1"
+        eType="#//MissionOperation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MissionOperation" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Negation" eSuperTypes="#//MissionOperation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="not" lowerBound="1" eType="#//Missions"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Composition" eSuperTypes="#//MissionOperation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="binaryType" eType="#//CompositionOperator"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="missions" lowerBound="2"
+        upperBound="-1" eType="#//Missions" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Conservation" eSuperTypes="#//CompositePatterns #//MissionDependent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="measure" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Preservation" eSuperTypes="#//CompositePatterns #//MissionDependent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="measure" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value1" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value2" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RepeatEvery" eSuperTypes="#//CompositePatterns #//Timed #//MissionDependent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Timed" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="t" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ConditionDependent" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="condition" eType="#//Condition"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locationevent" upperBound="-1"
+        eType="#//LocationEvent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ActionDependent" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+        eType="#//Action"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MissionDependent" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="missions" lowerBound="1"
+        eType="#//Missions" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Maintain" eSuperTypes="#//CompositePatterns #//ConditionDependent #//MissionDependent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="End" eSuperTypes="#//CompositePatterns #//ConditionDependent #//MissionDependent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResumeIf" eSuperTypes="#//CompositePatterns #//ConditionDependent #//MissionDependent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Accrue" eSuperTypes="#//CompositePatterns #//MissionDependent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="measure" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Secure" eSuperTypes="#//CompositePatterns #//LocationDependent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Equidistance" eSuperTypes="#//CompositePatterns #//MissionDependent">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location1" eType="#//Location"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="location2" eType="#//Location"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="robots1" lowerBound="1"
+        eType="#//Robots"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="robots2" lowerBound="1"
+        eType="#//Robots"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Trail" eSuperTypes="#//CompositePatterns #//MissionDependent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objetToFollow" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="distance" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LocationDependent" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locations" lowerBound="1"
+        upperBound="-1" eType="#//Location"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pause" eSuperTypes="#//CompositePatterns #//Timed #//MissionDependent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Timeout" eSuperTypes="#//CompositePatterns #//Timed #//MissionDependent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReliabilityConfidence" eSuperTypes="#//CompositePatterns #//MissionDependent #//LevelOfConfidence">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="measure" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LevelOfConfidence" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="confidence" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Relaxed" eSuperTypes="#//CompositePatterns #//MissionDependent #//LevelOfConfidence"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AlmostAt" eSuperTypes="#//CompositePatterns #//Timed #//MissionDependent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExactlyAt" eSuperTypes="#//CompositePatterns #//Timed #//MissionDependent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DeadlineAt" eSuperTypes="#//CompositePatterns #//Timed #//MissionDependent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Proportional" eSuperTypes="#//CompositePatterns">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="proportion" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mission1" lowerBound="1"
+        eType="#//Missions" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mission2" lowerBound="1"
+        eType="#//Missions" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Execute" eSuperTypes="#//CompositePatterns #//SetOfActionsDependent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SetOfActionsDependent" abstract="true"
+      interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="setOfActions" lowerBound="1"
+        upperBound="-1" eType="#//Action"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Sequencing" eSuperTypes="#//CompositePatterns #//SetOfActionsDependent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Deviation" eSuperTypes="#//CompositePatterns #//SetOfActionsDependent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Repeat" eSuperTypes="#//CompositePatterns #//MissionDependent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+</ecore:EPackage>
