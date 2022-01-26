@@ -116,10 +116,13 @@ Changing "locationevent+=LocationEvent" to "locationevent=LocationEvent" should 
 ## New Ecore and Xtext files
 The reviewed ecore and xtext files are available here.
 
-
 ## Run Xtext file
 
-Right click on the first xtext plugin > Run as > Run Configuration > Run
+![image](https://user-images.githubusercontent.com/63869574/150648202-5084d6df-5d36-43ad-89d4-e3420b5c0076.png)
+
+
+Right click on the first xtext plugin > Run as > Run Configuration > Eclipse Application > Launch Runtime Eclipse
+
 
 ## Create and run Xtend 
 
