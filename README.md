@@ -129,7 +129,7 @@ http://www.cs.ru.nl/J.Hooman/DSL/AdvancedXtextManual.pdf
 
 Remember to "Clean" the project to see the generated files and for any update.
 
-![image](https://user-images.githubusercontent.com/63869574/151086056-886f50b4-b233-4a09-bc62-edb617f1eaa8.png)
+![image](https://user-images.githubusercontent.com/63869574/151086353-e6af0335-4d0b-4aee-a280-656eb1ab84ff.png)
 
 ![image](https://user-images.githubusercontent.com/63869574/151086219-66b4fcd7-cd12-4f53-9297-f18bfebfae0d.png)
 
