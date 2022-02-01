@@ -5,9 +5,13 @@
 ### Ecore diagram
 
 Useful resources: https://eclipsesource.com/blogs/tutorials/emf-tutorial/
-We will be using Eclipse Modelling Tools 2020. 
+Install in other Eclipse versions: https://www.vogella.com/tutorials/EclipseEMF/article.html
 
-In Eclipse, install the plugins Xtext and Xtend (Help> Eclipse Marketplace).
+To start we need EMF and SDK. We will be using Eclipse Modelling Tools 2020 that already have these installed. However, it can be installed in other Eclipse versions via Help>Install New Software> EMF - Eclipse Modeling Framework SDK and the Ecore Diagram Editor (SDK):
+![image](https://user-images.githubusercontent.com/63869574/152025536-be74c21f-bc86-4f02-88fc-ba2a5568bf9f.png)
+
+
+Install the plugins Xtext and Xtend (Help> Eclipse Marketplace).
 
 Create a new Empty EMF project. 
 
