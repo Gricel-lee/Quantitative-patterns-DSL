@@ -1,6 +1,6 @@
 # Possible Errors
 
-## 
+##  org.eclipse.xtext.common.Terminals package not detected in MyDSL.xtext file
 Check xtext manifest. It should contains something similar to:
 ```
 Manifest-Version: 1.0
