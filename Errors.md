@@ -37,3 +37,8 @@ Import-Package: org.apache.log4j
 ```
 
 where ```Require-Bundle: uoy.mrs.dsl``` is the project containing the .ecore file; and ```org.xtext.example.mydsl``` is the xtext project.
+
+
+## Downloading ANTLR parser generator failed: download.itemis.com. Please install the feature 'Xtext Antlr SDK' manually using the external updatesite: 'http://download.itemis.com/updates/'.
+
+Go to Marketplace and uninstall/reinstall Xtext. 
