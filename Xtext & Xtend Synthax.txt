@@ -1,4 +1,0 @@
-# Xtend
-
-## Get all elements of a class:
-
