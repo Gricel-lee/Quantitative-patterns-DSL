@@ -41,11 +41,11 @@ where ```Require-Bundle: uoy.mrs.dsl``` is the project containing the .ecore fil
 
 ## Downloading ANTLR parser generator failed: download.itemis.com. Please install the feature 'Xtext Antlr SDK' manually using the external updatesite: 'http://download.itemis.com/updates/'.
 
-Check EString options are written with '' not ""
+Check EString options:
 
-Right: ```type =('more than' | 'less than' | 'exactly')```
+Right: ```type =('more than' | 'less equal than' | 'exactly')```
 
-Error: ```type =("more than" | "less than" | "exactly")```
+Error: ```type =('>'|'<='|'=')```
 
 Check if your Xtext code has any errors (making it simpler or generating a new Xtext project).
 In the worst case, go to Marketplace and uninstall/reinstall Xtext. 
