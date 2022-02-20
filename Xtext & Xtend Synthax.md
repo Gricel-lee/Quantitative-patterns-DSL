@@ -1,6 +1,7 @@
 # Xtend
 ## Example 
-Reference of a Xtext, xtend example (Claudio's repository): ![image](https://user-images.githubusercontent.com/63869574/154850285-c415408e-c210-4741-bdee-e7c4d7a70490.png)
+Reference of a Xtext, xtend example (Claudio's repository):
+https://github.com/SNTSVV/ThEodorE/blob/master/lu.svv.theodore/src/lu/svv/theodore/generator/HlsGenerator.xtend
 
 
 ## Notes
